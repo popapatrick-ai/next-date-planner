@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Next Date Planner: a playful Saturday date decision app."
+    />
+    <title>Next Date Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="confettiCanvas" class="confetti-canvas" aria-hidden="true"></canvas>
+
+    <div class="background" aria-hidden="true">
+      <span class="floaty heart h1">&#9825;</span>
+      <span class="floaty sparkle s1">&#10022;</span>
+      <span class="floaty heart h2">&#9825;</span>
+      <span class="floaty sparkle s2">&#10023;</span>
+      <span class="floaty heart h3">&#9825;</span>
+      <span class="floaty sparkle s3">&#10022;</span>
+    </div>
+
+    <main class="page-shell">
+      <section class="planner-card" aria-labelledby="pageTitle">
+        <p class="eyebrow">Official weekend advisory</p>
+        <h1 id="pageTitle">Next Date Planner</h1>
+        <p class="subtitle">
+          After extensive analysis and consideration of all available options...
+        </p>
+
+        <div class="countdown-card" aria-live="polite">
+          <span class="countdown-label">Countdown to Saturday</span>
+          <div class="countdown-grid" id="countdown">
+            <span><strong id="days">0</strong>days</span>
+            <span><strong id="hours">0</strong>hours</span>
+            <span><strong id="minutes">0</strong>min</span>
+            <span><strong id="seconds">0</strong>sec</span>
+          </div>
+        </div>
+
+        <div class="idea-card">
+          <span class="idea-label">Committee suggestion</span>
+          <p id="dateIdea">A slow coffee walk with nowhere urgent to be.</p>
+        </div>
+
+        <div class="question-block">
+          <h2>What should Arianna do this Saturday?</h2>
+          <div class="option-grid">
+            <button id="patrickOption" class="option-button primary" type="button">
+              Spend a Saturday with Patrick
+            </button>
+            <button
+              id="elseOption"
+              class="option-button secondary"
+              type="button"
+              aria-describedby="unavailableMessage"
+            >
+              Something Else
+            </button>
+          </div>
+          <p id="unavailableMessage" class="unavailable" aria-live="polite"></p>
+        </div>
+
+        <section id="successCard" class="success-card hidden" aria-live="polite">
+          <div class="approval-seal">Approved</div>
+          <h2>Excellent choice.</h2>
+          <p>
+            The Date Planning Committee has reviewed all available options and
+            unanimously selected Patrick.
+          </p>
+
+          <div class="stats-grid" aria-label="Decision statistics">
+            <div class="stat">
+              <span>Approval Rating</span>
+              <strong>100%</strong>
+            </div>
+            <div class="stat">
+              <span>Status</span>
+              <strong>Approved</strong>
+            </div>
+            <div class="stat">
+              <span>Compatibility Score</span>
+              <strong>Extremely Promising</strong>
+            </div>
+          </div>
+
+          <button id="confirmButton" class="confirm-button" type="button">
+            Confirm My Excellent Decision
+          </button>
+        </section>
+
+        <section id="confirmationCard" class="confirmation-card hidden" aria-live="polite">
+          <h2>Reservation confirmed.</h2>
+          <p>Your Saturday now includes:</p>
+          <ul>
+            <li>Laughing</li>
+            <li>Good conversation</li>
+            <li>Questionable flirting</li>
+            <li>At least one unnecessary kiss</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
