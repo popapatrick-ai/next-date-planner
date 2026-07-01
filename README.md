@@ -23,6 +23,12 @@ Then visit:
 http://localhost:8000
 ```
 
+## Live Site
+
+```text
+https://popapatrick-ai.github.io/next-date-planner/
+```
+
 ## Deploy To GitHub Pages
 
 This repository includes a GitHub Actions workflow that deploys the static site to GitHub Pages after pushes to `main`.
