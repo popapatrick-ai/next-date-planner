@@ -27,4 +27,14 @@ http://localhost:8000
 
 This repository includes a GitHub Actions workflow that deploys the static site to GitHub Pages after pushes to `main`.
 
-No backend or environment variables are required.
+1. Open the repository on GitHub.
+2. Go to **Settings** > **Pages**.
+3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+4. Go to the **Actions** tab and run **Deploy GitHub Pages** if it has not already started.
+5. When the workflow finishes, open:
+
+```text
+https://popapatrick-ai.github.io/next-date-planner/
+```
+
+No backend, environment variables, package install, or paid services are required.
